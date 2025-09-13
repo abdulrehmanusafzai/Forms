@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
+    <style>
+    *{
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      /* height: 99vh; */
+      /* border: 2px solid; */
+    }
+    #main{
+      display: flex;
+      flex-direction: column;
+      border: 2px solid blue;
+      border-radius: 10px;
+      padding: 0px 120px 20px;
+    }
+
+    label {
+      /* display: block; */
+      margin-left: 10px;
+      margin-top: 20px;
+      margin-bottom: 5px;
+      color: rgb(35, 70, 90);
+    }
+    h1{
+      color: rgb(94, 168, 211);
+    }
+    form {
+      /* border: 2px solid red; */
+      display: flex;
+      flex-direction: column;
+      /* width: 500px; */
+    }
+
+    #names {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #otherDetails {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    #fName, #lName {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .input {
+      height: 30px;
+      padding: 7px;
+      font-size: 11pt;
+      border-radius: 8px;
+      border: none;
+      color: rgb(158, 158, 158);
+      outline: 2px solid rgb(10, 156, 240);
+      transition: outline 200ms ease, box-shadow 200ms ease;
+    }
+    .input:focus{
+      outline: 2px solid rgb(10, 156, 240);
+      box-shadow: 0 0 20px rgb(10, 156, 240);
+    }
+    #btn{
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      padding-top: 30px;
+      padding-right: 10px;
+    }
+    #button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 100px;
+      font-size: 11pt;
+      background-color: blueviolet;
+      color: rgb(214, 214, 214);
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 300ms ease-out;
+    }
+    #button:hover{
+      background-color: rgb(165, 104, 221);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <h1>Form</h1>
+    <form>
+      <div id="names">
+        <div id="fName">
+          <label for="fNameBar">First Name</label>
+          <input type="text" id="fNameBar" class="input" placeholder="Sherlock">
+        </div>
+        <div id="lName">
+          <label for="lNameBar">Last Name</label>
+          <input type="text" id="lNameBar" class="input" placeholder="Holmes">
+        </div>
+      </div>
+      <div id="otherDetails">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="input" placeholder="Example@email.com">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" class="input" placeholder="+92 123 4567890">
+        <label for="date">Date of Birth</label>
+        <input type="date" id="date" class="input">
+        <label for="password">Create a Password</label>
+        <input type="password" id="password" class="input" placeholder="ahf#jDIE$ksh123%#">
+        <label for="cPassword">Confirm Password</label>
+        <input type="password" id="cPassword" class="input" placeholder="ahf#jDIE$ksh123%#">
+      </div>
+      <div id="btn">
+        <div id="button" onclick="window.location.reload()">Submit</div>
+      </div>
+    </form>
+  </div>
+  <a href="smallForm.html">Go to small Form</a>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Legend Form</title>
+  <style>
+    *{
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+    }
+    body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 90vh;  
+    }
+    #form{
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border: 4px solid red;
+      border-radius: 12px;
+      padding: 50px;
+    }
+    .inputGroup{
+      position: relative;
+      width: 300px;
+      margin: 12px;
+    }
+    .input{
+      width: 100%;
+      font-weight: 400;
+      padding: 12px 10px;
+      outline: 2px solid rgb(48, 48, 143);
+      border: none;
+      border-radius: 6px;
+      background: none;
+    }
+    label{
+      position: absolute;
+      left: 10px;
+      top: 12px;
+      color: #777;
+      font-size: 12pt;
+      pointer-events: none;
+      background-color: #fff;
+      padding: 0 4px;
+      transition: all 200ms ease;
+    }
+    .input:focus, input:not(:placeholder-shown){
+      outline: 2px solid rgb(187, 156, 19);
+      box-shadow: 0 0 30px 4px rgb(187, 156, 19);
+    }
+    .input:focus + label, .input:not(:placeholder-shown) + label{
+      top: -12px;
+      left: 8px;
+      font-size: 10pt;
+      color: rgb(187, 156, 19);
+    }
+    #button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 40px;
+      font-size: 15pt;
+      font-weight: 300;
+      background-color: blueviolet;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 200ms ease;
+    }
+    #button:hover{
+      background-color: rgb(156, 76, 230);
+    }
+    h1{
+      font-weight: 400;
+    }
+    @media screen and (max-width: 375px){
+      #form{
+        width: 200px  ;
+      }
+      .input {
+        width: 180px;
+      }
+      h1{
+        font-size: 23pt;
+      }
+    }
+  </style>
+</head>
+<body>
+  <form id="form">
+    <h1>Small Form</h1>
+    <div class="inputGroup">
+      <input type="email" class="input" id="email" placeholder=" ">
+      <label for="email">Email, Username or Phone Number</label>
+    </div>
+    <div class="inputGroup">
+      <input type="password" class="input" placeholder=" ">
+      <label for="password">Password</label>
+    </div>
+    <div id="button" onclick="window.location.reload()">Submit</div>
+  </form>
+  <a href="index.html">Go to the other form page</a>
+</body>
+</html>
